@@ -31,7 +31,9 @@
     "recordDemo": "ZDOTDIR=/Users/gantman/recording terminalizer record pretty -c ./config.yml",
     "playDemo": "terminalizer play pretty",
     "renderDemo": "terminalizer render pretty",
-    "cleanDemo": "rm -rf render*.gif"
+    "cleanDemo": "rm -rf render*.gif",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Gant Laborde",
   "license": "MIT",
@@ -43,7 +45,8 @@
     "json5": "2.1.0",
     "listr": "^0.14.3",
     "minimist": "^1.2.0",
-    "ramda": "0.26.1"
+    "ramda": "0.26.1",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@types/callsite": "^1.0.30",
@@ -113,5 +116,6 @@
       "jsx",
       "json"
     ]
-  }
+  },
+  "snyk": true
 }
